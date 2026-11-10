@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         tenten: {
-          bg: '#FFF8F0',       // Warm White Canvas (~60%)
+          bg: '#FFFFFF',       // Clean White Canvas
           dark: '#1E1E24',     // Dark Contrast & Text (~30%)
           primary: '#92140C',  // Deep Spiced Red CTA Accent (~10%)
           surface: '#FFFFFF',  // Clean Surface
