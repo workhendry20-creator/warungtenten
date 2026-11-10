@@ -40,6 +40,22 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden bg-white pt-8 pb-16 md:pt-16 md:pb-24" aria-label="Hero Warung TenTen">
+      {/* Subtle Dot Grid Background Pattern Overlay (Opacity ~4%, fading to bottom) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none select-none -z-10 opacity-[0.04] [background-image:radial-gradient(#1E1E24_1px,transparent_1px)] [background-size:24px_24px] [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]"
+      />
+
+      {/* Faint Ambient Warm Crimson Glow (Top-Right & Mid-Left Accents) */}
+      <div
+        aria-hidden="true"
+        className="absolute -top-24 -right-24 w-96 h-96 bg-[#92140C]/[0.035] rounded-full blur-3xl pointer-events-none select-none -z-10"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 -left-32 w-80 h-80 bg-[#92140C]/[0.025] rounded-full blur-3xl pointer-events-none select-none -z-10"
+      />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
