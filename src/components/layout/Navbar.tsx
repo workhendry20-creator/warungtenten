@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-tenten-bg/90 backdrop-blur-md border-b border-tenten-dark/10 transition-colors">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#1E1E24]/10 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Brand Logo & Name */}
@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-2.5 text-tenten-dark group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary rounded-xl"
             aria-label={`${siteConfig.name} - Beranda`}
           >
-            <div className="w-9 h-9 rounded-xl bg-tenten-primary text-tenten-bg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
+            <div className="w-9 h-9 rounded-xl bg-tenten-primary text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
               <UtensilsCrossed className="w-5 h-5" aria-hidden="true" />
             </div>
             <div className="flex flex-col">
@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               aria-label="Pesan menu sarapan sekarang"
-              className="inline-flex items-center gap-2 bg-tenten-primary hover:bg-tenten-primary/95 text-tenten-bg text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-tenten-primary hover:bg-tenten-primary/95 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary focus-visible:ring-offset-2"
             >
               <span>Pesan Sekarang</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-xl text-tenten-dark hover:bg-tenten-dark/5 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary"
+              className="p-2 rounded-xl text-tenten-dark hover:bg-neutral-100 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary"
               aria-label={isMobileMenuOpen ? 'Tutup navigasi' : 'Buka menu navigasi'}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="overflow-hidden md:hidden border-b border-tenten-dark/10 bg-tenten-bg/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3"
+            className="overflow-hidden md:hidden border-b border-[#1E1E24]/10 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3"
           >
             <nav className="flex flex-col space-y-1.5" aria-label="Navigasi Menu Seluler">
               {navLinks.map((link) => (
@@ -116,19 +116,19 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   aria-label={link.ariaLabel}
                   onClick={handleNavClick}
-                  className="px-3.5 py-2.5 rounded-xl text-base font-semibold text-tenten-dark hover:bg-tenten-dark/5 hover:text-tenten-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary"
+                  className="px-3.5 py-2.5 rounded-xl text-base font-semibold text-tenten-dark hover:bg-neutral-100 hover:text-tenten-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
-            <div className="pt-3 border-t border-tenten-dark/10">
+            <div className="pt-3 border-t border-neutral-200">
               <motion.a
                 href="#pesan"
                 whileTap={{ scale: 0.98 }}
                 onClick={handleNavClick}
                 aria-label="Pesan menu sarapan sekarang"
-                className="flex items-center justify-center gap-2 w-full bg-tenten-primary text-tenten-bg text-center font-bold py-3 rounded-xl shadow-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary focus-visible:ring-offset-2"
+                className="flex items-center justify-center gap-2 w-full bg-tenten-primary text-white text-center font-bold py-3 rounded-xl shadow-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary focus-visible:ring-offset-2"
               >
                 <span>Pesan Sekarang</span>
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />

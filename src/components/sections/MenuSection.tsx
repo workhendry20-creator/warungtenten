@@ -29,14 +29,15 @@ export const MenuSection: React.FC = () => {
   return (
     <section
       id="menu"
-      className="py-16 md:py-24 bg-tenten-bg relative scroll-mt-16 md:scroll-mt-20 border-t border-tenten-dark/10"
+      className="py-16 md:py-24 bg-white relative scroll-mt-16 md:scroll-mt-20 border-t border-neutral-200"
       aria-label="Katalog Menu Sarapan"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-tenten-primary bg-tenten-primary/10 px-3 py-1 rounded-full mb-3">
-            Pilihan Menu Pagi
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#1E1E24] bg-neutral-50 border border-neutral-200 px-3.5 py-1.5 rounded-full shadow-sm mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-tenten-primary" aria-hidden="true" />
+            <span>Pilihan Menu Pagi</span>
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-tenten-dark tracking-tight">
             Menu Sarapan Favorit
@@ -52,7 +53,7 @@ export const MenuSection: React.FC = () => {
           <div
             role="tablist"
             aria-label="Kategori Menu Sarapan"
-            className="inline-flex p-1.5 rounded-2xl bg-tenten-dark/5 border border-tenten-dark/10"
+            className="inline-flex p-1.5 rounded-2xl bg-neutral-100/90 border border-neutral-200"
           >
             {categories.map((cat) => {
               const isActive = activeCategory === cat.label;
@@ -67,7 +68,7 @@ export const MenuSection: React.FC = () => {
                   id={`tab-${cat.label}`}
                   onClick={() => setActiveCategory(cat.label)}
                   className={`relative flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-sm font-bold transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tenten-primary ${
-                    isActive ? 'text-tenten-bg' : 'text-tenten-dark/75 hover:text-tenten-dark'
+                    isActive ? 'text-white' : 'text-tenten-dark/75 hover:text-tenten-dark'
                   }`}
                 >
                   {isActive && (
@@ -102,10 +103,10 @@ export const MenuSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="bg-tenten-surface rounded-2xl overflow-hidden border border-tenten-dark/10 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col group"
+                className="bg-white rounded-2xl overflow-hidden border border-neutral-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col group"
               >
                 {/* Image Container with Badge */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-tenten-dark/5">
+                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -113,12 +114,12 @@ export const MenuSection: React.FC = () => {
                     loading="lazy"
                   />
                   {item.isFavorite && (
-                    <div className="absolute top-3 left-3 bg-tenten-primary text-tenten-bg text-xs font-extrabold px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
+                    <div className="absolute top-3 left-3 bg-tenten-primary text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
                       <Sparkles className="w-3 h-3" aria-hidden="true" />
                       <span>Favorit</span>
                     </div>
                   )}
-                  <div className="absolute bottom-3 right-3 bg-tenten-dark/70 backdrop-blur-sm text-tenten-bg text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                  <div className="absolute bottom-3 right-3 bg-tenten-dark/75 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
                     {item.category}
                   </div>
                 </div>
@@ -135,7 +136,7 @@ export const MenuSection: React.FC = () => {
                   </div>
 
                   {/* Price Row (NO individual order button as per strict constraint) */}
-                  <div className="mt-5 pt-4 border-t border-tenten-dark/10 flex items-center justify-between">
+                  <div className="mt-5 pt-4 border-t border-neutral-100 flex items-center justify-between">
                     <span className="text-xs font-semibold uppercase tracking-wider text-tenten-muted">
                       Harga
                     </span>
@@ -154,4 +155,3 @@ export const MenuSection: React.FC = () => {
 };
 
 export default MenuSection;
-

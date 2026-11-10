@@ -34,7 +34,7 @@ export const CTASection: React.FC = () => {
   return (
     <section
       id="pesan"
-      className="py-16 md:py-24 bg-tenten-bg relative scroll-mt-16 md:scroll-mt-20 border-t border-tenten-dark/10"
+      className="py-16 md:py-24 bg-white relative scroll-mt-16 md:scroll-mt-20 border-t border-neutral-200"
       aria-label="Pemesanan WhatsApp Warung TenTen"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,3 +114,4 @@ export const CTASection: React.FC = () => {
 };
 
 export default CTASection;
+

@@ -60,14 +60,15 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="tentang"
-      className="py-16 md:py-24 bg-tenten-bg relative scroll-mt-16 md:scroll-mt-20"
+      className="py-16 md:py-24 bg-white relative scroll-mt-16 md:scroll-mt-20 border-t border-neutral-200"
       aria-label="Tentang Warung TenTen"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-tenten-primary bg-tenten-primary/10 px-3 py-1 rounded-full mb-3">
-            Cerita & Nilai Kami
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#1E1E24] bg-neutral-50 border border-neutral-200 px-3.5 py-1.5 rounded-full shadow-sm mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-tenten-primary" aria-hidden="true" />
+            <span>Cerita & Nilai Kami</span>
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-tenten-dark tracking-tight">
             Sarapan yang Dimasak dengan Sepenuh Hati
@@ -92,9 +93,9 @@ export const AboutSection: React.FC = () => {
               <motion.div
                 key={pillar.id}
                 variants={cardVariants}
-                className="bg-tenten-surface rounded-2xl p-6 sm:p-8 border border-tenten-dark/10 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start group"
+                className="bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start group"
               >
-                <div className="w-12 h-12 rounded-xl bg-tenten-primary/10 text-tenten-primary flex items-center justify-center mb-5 group-hover:bg-tenten-primary group-hover:text-tenten-bg transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-neutral-100 text-tenten-primary flex items-center justify-center mb-5 group-hover:bg-tenten-primary group-hover:text-white transition-colors duration-300 border border-neutral-200/60">
                   <IconComponent className="w-6 h-6" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-tenten-dark mb-2.5 tracking-tight">
@@ -113,4 +114,3 @@ export const AboutSection: React.FC = () => {
 };
 
 export default AboutSection;
-
