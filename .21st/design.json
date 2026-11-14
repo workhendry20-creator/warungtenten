@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "project": {
+    "name": "warungtenten",
+    "productType": "culinary-landing-page",
+    "stack": [
+      "react",
+      "tailwind-v3",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/index.css"
+    ],
+    "components": [
+      "src/components/sections/HeroSection.tsx"
+    ],
+    "assets": [
+      "public/assets",
+      "assets"
+    ],
+    "instructions": [
+      "DESIGN_SYSTEM.md",
+      "PRD.md",
+      "AGENT.md"
+    ]
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "tenten-bg": "#FFFFFF",
+      "tenten-dark": "#1E1E24",
+      "tenten-primary": "#92140C",
+      "tenten-surface": "#FFFFFF",
+      "tenten-muted": "#7A7A85"
+    },
+    "typography": {
+      "heading": "Plus Jakarta Sans, Inter",
+      "body": "Plus Jakarta Sans, Inter"
+    },
+    "spacing": {},
+    "radius": {
+      "card": "1rem",
+      "button": "0.75rem",
+      "badge": "9999px"
+    },
+    "shadows": {
+      "card": "shadow-sm hover:shadow-md"
+    },
+    "motion": {
+      "stagger": 0.12,
+      "spring": {
+        "stiffness": 350,
+        "damping": 25
+      }
+    },
+    "density": "comfortable"
+  },
+  "components": {
+    "installed": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "preferredPrimitives": [],
+    "patterns": [
+      "bento-grid",
+      "interactive-dish-switcher",
+      "live-pulse-badge"
+    ]
+  },
+  "constraints": {
+    "must": [
+      "Strict 3-color palette: #92140C, #FFFFFF, #1E1E24",
+      "Separation of concerns: data imported from src/data",
+      "WCAG AAA compliance & visible focus rings",
+      "Lucide icons only, no raw emojis"
+    ],
+    "avoid": [
+      "Over-engineered animations",
+      "Individual WA order buttons inside menu cards",
+      "Horizontal scroll on 375px mobile viewports"
+    ]
+  },
+  "decisions": [
+    {
+      "id": "hero-bento-direction",
+      "direction": "Integrated Hero Bento",
+      "description": "Interactive asymmetrical bento card showcase integrated directly in hero visual column with dish switcher, live opening status pulse, and authentic spices guarantee card.",
+      "date": "2026-11-14"
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "design.colorMode:light",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v3",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-11-14T10:05:58.438Z"
+}
